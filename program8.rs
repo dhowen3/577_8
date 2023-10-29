@@ -3,7 +3,7 @@ use std::cmp::max;
     
 type InputNumType = u16;
 type TwoTuple = (InputNumType, InputNumType);
-type ResultNumType = u64;
+type ResultNumType = u32;
 
 fn get_one_num() -> InputNumType {
     let mut line = String::new();
@@ -26,9 +26,9 @@ fn get_result(instance_vec: &Vec<TwoTuple>,
     let capacity = num_items_and_capacity.1 as usize;
     // set up dp array
     let mut dp : Vec<Vec<ResultNumType>> = Vec::new();
-    for row_index in 0..(num_items + 1) {
+    for _row_index in 0..(num_items + 1) {
 	let mut row_vec : Vec<ResultNumType> = Vec::new();
-	for col_index in 0..(capacity + 1) {
+	for _col_index in 0..(capacity + 1) {
 	    row_vec.push(0);
 	}
 	dp.push(row_vec);
@@ -44,7 +44,7 @@ fn get_result(instance_vec: &Vec<TwoTuple>,
 		latter = dp[row_index - 1][weight_offset as usize] + (item_weight_value.1 as ResultNumType);
 	    }
 	    dp[row_index][col_index] = max(former, latter);
-	}
+	    }
     }
     dp[num_items][capacity]
 }

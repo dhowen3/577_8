@@ -1,5 +1,5 @@
 program8: program8.rs
-	rustc -o program8 program8.rs
+	rustc -C opt-level=3 -o program8 program8.rs
 
 build: program8
 
