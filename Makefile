@@ -6,5 +6,5 @@ build: program8
 run: program8
 	./program8
 
-test_run:
+test_run: program8
 	./program8 < GivenTest-5.txt
