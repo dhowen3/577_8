@@ -1,6 +1,6 @@
 Coding Question: Knapsack \
 Implement the algorithm for the Knapsack Problem in either C, C++, C#, Java, Python, or Rust. Be
-efficient and implement it in $O(nW)$ time, where n is the number of items and W is the capacity. \
+efficient and implement it in $O(nW)$ time, where $n$ is the number of items and $W$ is the capacity. \
 The input will start with an positive integer, giving the number of instances that follow. For each
 instance, there will two positive integers, representing the number of items and the capacity, followed
 by a list describing the items. For each item, there will be two nonnegative integers, representing the
